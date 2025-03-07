@@ -129,6 +129,7 @@ namespace SitefinityCoreHelper
             {
                 FileName = "powershell.exe",
                 Arguments = $"-ExecutionPolicy Bypass -File \"{tempScriptPath}\" -widgetName \"{widgetName}\"",
+                WorkingDirectory = projectPath,
                 UseShellExecute = false,
                 RedirectStandardOutput = true,
                 RedirectStandardError = true

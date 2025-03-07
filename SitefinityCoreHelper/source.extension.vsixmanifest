@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="SitefinityCoreHelper.ee564c9c-d831-471e-b8f9-fe11baa25f4d" Version="1.03" Language="en-US" Publisher="Mario Eid" />
+        <Identity Id="SitefinityCoreHelper.ee564c9c-d831-471e-b8f9-fe11baa25f4d" Version="1.04" Language="en-US" Publisher="Mario Eid" />
         <DisplayName>SitefinityCoreHelper</DisplayName>
         <Description xml:space="preserve">A Sitefinity .NET Core extension that automates the creation of Sitefinity widgets.</Description>
+        <MoreInfo>https://github.com/marsargoo/Sitefinity-Core-Helper</MoreInfo>
         <Icon>favicon-32x32.png</Icon>
         <PreviewImage>favicon-32x32.png</PreviewImage>
     </Metadata>
