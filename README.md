@@ -6,6 +6,9 @@ This Visual Studio extension automates the process of creating **Sitefinity widg
 1. Download and install the extension from **Manage Extensions** in Visual Studio.  
 2. Restart Visual Studio after installation.  
 3. Right-click inside your **project folder** and select **"Add Sitefinity Widget"** from the context menu.  
+
+<img src="SitefinityCoreHelper/Resources/VSIXHelperImage.png" width="500">
+
 4. Enter a widget name, and the extension will generate the necessary files.  
 
 ## Dependencies
