@@ -32,8 +32,8 @@ using WebApp.ViewModels;
 
 namespace WebApp.ViewComponents;
 
-[SitefinityWidget(Title = "${widgetName}", Section = "Enterprise Content", Category = WidgetCategory.Content)]
-public class ${widgetName}ViewComponent(IRestClient restClient, PaginatedRestService paginatedClient) : ViewComponent
+[SitefinityWidget(Title = "${widgetName}", Section = "", Category = WidgetCategory.Content)]
+public class ${widgetName}ViewComponent() : ViewComponent
 {
     public async Task<IViewComponentResult> InvokeAsync(IViewComponentContext<${widgetName}Entity> context)
     {
@@ -66,7 +66,7 @@ $razorView = @"
 @using WebApp.ViewModels
 @model ${widgetName}ViewModel
 
-<h1>Hello. Placeholder for ${widgetName} widget</h1>
+<h1>Hello! I'm a Placeholder for ${widgetName} widget</h1>
 "@
 
 # Write files with better error handling

@@ -132,7 +132,8 @@ namespace SitefinityCoreHelper
                 WorkingDirectory = projectPath,
                 UseShellExecute = false,
                 RedirectStandardOutput = true,
-                RedirectStandardError = true
+                RedirectStandardError = true,
+                CreateNoWindow = true 
             };
 
             var process = System.Diagnostics.Process.Start(startInfo);
