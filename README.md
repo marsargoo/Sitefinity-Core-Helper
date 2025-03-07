@@ -12,9 +12,7 @@ This Visual Studio extension automates the process of creating **Sitefinity widg
 4. Enter a widget name, and the extension will generate the necessary files.  
 
 ## Dependencies
-- **.NET Core 3.0 or later**
-- **Visual Studio 2019 or later**  
-- **Sitefinity .NET Core Renderer** installed in the project  
+- **Visual Studio 2022 or later**  
 
 ## How It Works
 1. When triggered, the extension prompts you for a **widget name**.  
