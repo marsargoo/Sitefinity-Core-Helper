@@ -77,10 +77,6 @@
     </VSCTCompile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="favicon-32x32.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Resources\apple-favicon-16x16.png" />
     <Content Include="Resources\favicon-32x32.png" />
   </ItemGroup>
