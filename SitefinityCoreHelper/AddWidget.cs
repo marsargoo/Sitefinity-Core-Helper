@@ -146,10 +146,23 @@ namespace SitefinityCoreHelper
                 CreateNoWindow = true 
             };
 
-            var process = System.Diagnostics.Process.Start(startInfo);
-            process.WaitForExit();
+            try
+            {
+                var process = System.Diagnostics.Process.Start(startInfo);
+                process.WaitForExit();
 
-            MessageBox.Show($"Widget '{widgetName}' created successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Delete the temporary script file after execution
+                if (File.Exists(tempScriptPath))
+                {
+                    File.Delete(tempScriptPath);
+                }
+
+                MessageBox.Show($"Widget '{widgetName}' created successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Widget Creation Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private static void ExtractEmbeddedResource(string resourceName, string outputPath)
