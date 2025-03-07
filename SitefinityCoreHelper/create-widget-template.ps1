@@ -25,9 +25,7 @@ namespace WebApp.Entities
 $viewComponentContent = @"
 using Microsoft.AspNetCore.Mvc;
 using Progress.Sitefinity.AspNetCore.ViewComponents;
-using Progress.Sitefinity.RestSdk;
 using WebApp.Entities;
-using WebApp.Services;
 using WebApp.ViewModels;
 
 namespace WebApp.ViewComponents;
@@ -35,7 +33,7 @@ namespace WebApp.ViewComponents;
 [SitefinityWidget(Title = "${widgetName}", Section = "", Category = WidgetCategory.Content)]
 public class ${widgetName}ViewComponent() : ViewComponent
 {
-    public async Task<IViewComponentResult> InvokeAsync(IViewComponentContext<${widgetName}Entity> context)
+    public IViewComponentResult Invoke(IViewComponentContext<${widgetName}Entity> context)
     {
         ArgumentNullException.ThrowIfNull(context);
 

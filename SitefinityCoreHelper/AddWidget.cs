@@ -106,17 +106,27 @@ namespace SitefinityCoreHelper
                 return;
             }
 
-            // Get the current project's directory
-            DTE dte = Package.GetGlobalService(typeof(SDTE)) as DTE;
-            var project = dte?.ActiveSolutionProjects is Array projects && projects.Length > 0
-                ? projects.GetValue(0) as Project
-                : null;
 
-            string projectPath = project != null ? Path.GetDirectoryName(project.FullName) : null;
+            DTE dte = Package.GetGlobalService(typeof(SDTE)) as DTE;
+
+            // Get the selected project in Solution Explorer
+            UIHierarchy solutionExplorer = dte?.Windows.Item(EnvDTE.Constants.vsWindowKindSolutionExplorer).Object as UIHierarchy;
+
+            string projectPath = null;
+
+            if (solutionExplorer?.SelectedItems is Array selectedItems && selectedItems.Length > 0)
+            {
+                Project selectedProject = (selectedItems.GetValue(0) as UIHierarchyItem)?.Object as Project;
+
+                if (selectedProject != null)
+                {
+                    projectPath = Path.GetDirectoryName(selectedProject.FullName);
+                }
+            }
 
             if (string.IsNullOrEmpty(projectPath))
             {
-                MessageBox.Show("Project path not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No project selected or project path not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
